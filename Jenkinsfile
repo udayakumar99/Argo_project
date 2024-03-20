@@ -1,11 +1,11 @@
 pipeline {
-    agent 
-    {
-        label "s1"
+    agent {
+  label 's1'
     }
 
     stages {
-        stage('git') {
+        
+       stage('git') {
             steps {
                 git branch: 'main', url: 'https://github.com/udayakumar99/task2.git'
             }
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('run python') {
             steps {
-                sh "python main.py"
+                sh "python3 main.py"
             }
         }
         stage('shell') {
@@ -34,6 +34,7 @@ pipeline {
             steps {
                 sh "bash shel.sh"
             }
-        }
-    }
+            
+        }
+    }
 }
