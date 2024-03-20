@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent 
+    {
+        label "s1"
+    }
 
     stages {
         stage('git') {
