@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodeapp-load-balancer-service
+  name: myservice
 spec:
-  type: LoadBalancer
   ports:
+       type: Load Balancer
     - port: 80
       targetPort: 80
+      nodePort: 31000
   selector:
-    app: myapp
-    type: front-end
+    type: web
